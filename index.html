@@ -1,42 +1,70 @@
 <!DOCTYPE html>
-<!-- saved from url=(0022)https://theboys.store/ -->
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>The BOYS</title>
-<style>
-body {
-  background-color: black;
-  text-align: center;
-  color: white;
-  font-family: Arial, Helvetica, sans-serif;
-}
-</style>
-</head>
-<body>
-
-  <p class="aligncenter">
-    <img src="https://i.ibb.co/rtZLJDH/vol3-tag.png" alt="The Boys, Vol. 3">
-</p>
+<html lang="en">
+	<head>
+		<title>XOsquaDD</title>
+		<meta charset="utf-8">
+		<meta name="generator" content="Three.js Editor">
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+		<style>
+			body {
+				background-color: black;
+				text-align: center;
+				color: white;
+				font-family: Courier, Helvetica, sans-serif;
+			}
+			canvas {
+				display: block;
+			}
+		</style>
+	</head>
+	<body ontouchstart="">
+		<body>
 <br>
 <br>
-    <p class="aligncenter">
-      <a href="https://the-boys.bandcamp.com/album/the-boys-vol-3">
-    <img src="https://f4.bcbits.com/img/a3886004276_10.jpg"  width="500" height="500" alt="INFO">
-      </a>
-</p>
-<br>
-<br>
-  <h2> Latest Post </h2>
+  <h2> XOsquaDD </h2>
 <br>
   <p class="aligncenter">
-    <a href="https://www.instagram.com/the_boys_4eva/">
-    <img src="https://scontent-mia3-2.cdninstagram.com/vp/6f843d49ba32d81ee6a502c0ce43e4e1/5DEF9DF5/t51.2885-15/e35/67629209_475233543025259_924887284726432374_n.jpg?_nc_ht=scontent-mia3-2.cdninstagram.com"  width="500" height="500" alt="INFO">
+    <a href="https://www.instagram.com/xosquadd/">
+    <img src="https://i.ibb.co/rv43nqB/185262619-555862202067762-4261103974825599601-n.jpg"  width="500" height="500" alt="INFO">
     </a>
 </p>
 <br>
 <p>
-<a href="home.html">
+<a href="https://xosquad.bandcamp.com/album/hi-im-xo-sama"> <!home.html goes here>
 <img border="0" alt="Continue." src="https://i.ibb.co/L0f78mx/vol3-tag3.png">
 </a>
 </p>
 
-</body><script type="text/javascript" src="./index_files/lat"></script><script type="text/javascript" src="./index_files/lt"></script></html>
+</body>
+
+	
+		<script type="module">
+
+			import * as THREE from './js/three.module.js';
+			import { APP } from './js/app.js';
+			import { VRButton } from './js/VRButton.js';
+
+			window.THREE = THREE; // Used by APP Scripts.
+			window.VRButton = VRButton; // Used by APP Scripts.
+
+			var loader = new THREE.FileLoader();
+			loader.load( 'app.json', function ( text ) {
+
+				var player = new APP.Player();
+				player.load( JSON.parse( text ) );
+				player.setSize( window.innerWidth, window.innerHeight );
+				player.play();
+
+				document.body.appendChild( player.dom );
+
+				window.addEventListener( 'resize', function () {
+
+					player.setSize( window.innerWidth, window.innerHeight );
+
+				} );
+
+			} );
+
+		</script>
+	</body>
+</html>
